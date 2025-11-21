@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sara Vieira Tattoo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Sara Vieira • Tattoo Artist</h1>
+        <p>Qualidade • Simplicidade • Delicadeza</p>
+
+        <div class="social-links">
+            <a href="#" id="insta">Instagram</a>
+            <a href="#" id="tik">TikTok</a>
+            <a href="#" id="ws">WhatsApp</a>
+        </div>
+    </header>
+
+    <section class="upload-section">
+        <h2>Publicar novo trabalho</h2>
+        <input type="file" accept="image/*" id="image-upload">
+        <button id="upload-btn">Adicionar ao Feed</button>
+    </section>
+
+    <section class="gallery" id="gallery"></section>
+
+    <div id="modal" class="modal" onclick="closeModal()">
+        <img id="modal-img">
+    </div>
+
+    <section class="booking">
+        <h2>Agendar Sessão</h2>
+        <form id="booking-form">
+            <input type="text" id="bname" placeholder="Nome" required>
+            <input type="email" id="bemail" placeholder="Email" required>
+            <input type="date" id="bdate" required>
+            <button type="submit">Enviar Pedido</button>
+        </form>
+        <p id="booking-result"></p>
+    </section>
+
+    <section class="reviews">
+        <h2>Avaliações & Comentários</h2>
+
+        <form id="review-form">
+            <input type="text" id="name" placeholder="O seu nome" required>
+            <select id="rating" required>
+                <option value="5">⭐⭐⭐⭐⭐</option>
+                <option value="4">⭐⭐⭐⭐</option>
+                <option value="3">⭐⭐⭐</option>
+                <option value="2">⭐⭐</option>
+                <option value="1">⭐</option>
+            </select>
+            <textarea id="comment" placeholder="A sua experiência" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+
+        <div id="comments-list"></div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
